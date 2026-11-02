@@ -30,12 +30,12 @@
       },
       "versions": [
         {
-          "version": "1.0.1",
-          "publishTimestamp": 1793656290,
+          "version": "1.0.2",
+          "publishTimestamp": 1793656984,
           "source": {
             "type": "git",
             "url": "https://github.com/Sad-Jack/deepseek-harness-russian",
-            "commit": "dc022b2db99f98f081aac9d16d28fef4ff14734a"
+            "commit": "eb730ce4ddb3f83db47285e60aaaffe31697e770"
           },
           "engines": {
             "dsh": "0.2.1-rc.5"
