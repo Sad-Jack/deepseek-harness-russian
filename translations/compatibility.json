@@ -1,0 +1,219 @@
+[
+  {
+    "namespace": "settings.agentPreset",
+    "key": "guideStandardExplanation",
+    "english": "### How it works\n\nThe agent calls tools directly to read and edit files, search, and run terminal commands. It includes Skills, planning, goals, subagents, workflows, and context compaction.\n\n### When to choose it\n\nStart here for everyday coding, file work, and research. Standard mode can also write scripts and process files in batches. PTC changes how tool calls are organized; it is not required for batch tasks.",
+    "russian": "### Как это работает\n\n\n\nАгент напрямую вызывает инструменты для чтения и редактирования файлов, поиска и выполнения команд терминала. Он включает в себя навыки, планирование, цели, субагенты, рабочие процессы и сжатие контекста.\n\n\n\n### Когда это выбирать\n\n\n\nНачните здесь ежедневное программирование, работу с файлами и исследования. Стандартный режим также позволяет писать сценарии и обрабатывать файлы в пакетном режиме. PTC изменяет организацию вызовов инструментов; для пакетных задач это не требуется.",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "settings.agentPreset",
+    "key": "guidePtcExplanation",
+    "english": "### How tools are called\n\nPTC means Programmatic Tool Calling. In this built-in preset, the agent uses run_code to write a TypeScript program that calls tools through a generated SDK. The program can use loops, conditions, error handling, and concurrent calls where appropriate.\n\n### What reaches the model\n\nTool results first reach the program, which can filter and combine them. The model receives what the program prints or returns; image results are attached separately. Nested tool calls are still recorded and remain subject to tool permissions.\n\n### Compared with Standard mode\n\nBoth modes can handle coding and batch tasks. Standard mode exposes individual tools directly; PTC organizes tool calls in code. The current PTC preset leaves the workflow tool disabled. Speed and token use depend on the task and how the program handles its results.",
+    "russian": "### Как называются инструменты\n\n\n\nPTC означает программный вызов инструмента. В этой встроенной настройке агент использует run_code для написания программы TypeScript, которая вызывает инструменты через сгенерированный SDK. Программа может использовать циклы, условия, обработку ошибок и параллельные вызовы, где это необходимо.\n\n\n\n### Что достигает модели\n\n\n\nРезультаты инструмента сначала поступают в программу, которая может их фильтровать и комбинировать. Модель получает то, что программа печатает или возвращает; Результаты изображения прилагаются отдельно. Вызовы вложенных инструментов по-прежнему записываются, и для них действуют разрешения инструмента.\n\n\n\n### По сравнению со стандартным режимом\n\n\n\nОба режима могут выполнять кодирование и пакетные задачи. Стандартный режим напрямую предоставляет доступ к отдельным инструментам; PTC организует вызовы инструментов в коде. В текущей предустановке PTC инструмент рабочего процесса отключён. Скорость и использование токенов зависят от задачи и того, как программа обрабатывает ее результаты.",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "settings.agentPreset",
+    "key": "guideCordisExplanation",
+    "english": "### What you can create\n\nCreator mode includes the standard task tools plus runtime inspection, persistent plugin management, and guidance for authoring Cordis plugins and agent presets. It can create a plugin that adds a capability or UI, or a preset that combines tools and prompts for a particular job.\n\n### Plugins and modes\n\nA plugin adds capabilities to DSH, such as a tool, a service connection, or a UI entry. A mode is an agent preset that selects tools and defines how the agent works in a task. A plugin can be included in a custom preset.\n\n### How the result takes effect\n\nAsk the agent to install and verify the result, not just generate source code. A plugin may load immediately or require a restart, depending on what it changes. A newly created preset is selected when starting a new task.",
+    "russian": "### Что вы можете создать\n\n\n\nРежим Creator включает в себя стандартные инструменты задач, а также проверку во время выполнения, постоянное управление плагинами и рекомендации по созданию подключаемых модулей Cordis и предустановок агента. Он может создать плагин, добавляющий возможности или пользовательский интерфейс, или предустановку, объединяющую инструменты и подсказки для конкретной работы.\n\n\n\n### Плагины и режимы\n\n\n\nПлагин добавляет к DSH возможности, такие как инструмент, подключение к службе или запись пользовательского интерфейса. Режим — это предустановка агента, которая выбирает инструменты и определяет, как агент работает над задачей. Плагин может быть включен в пользовательский пресет.\n\n\n\n### Как результат вступает в силу\n\n\n\nПопросите агента установить и проверить результат, а не просто генерировать исходный код. Плагин может загрузиться немедленно или потребовать перезагрузки, в зависимости от того, что он меняет. Вновь созданный пресет выбирается при запуске новой задачи.",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "chat",
+    "key": "row.running",
+    "english": "Running",
+    "russian": "Выполняется",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "conversation",
+    "key": "detail.status.running",
+    "english": "Running",
+    "russian": "Выполняется",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "conversation",
+    "key": "bash.running",
+    "english": "Running",
+    "russian": "Выполняется",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "conversation",
+    "key": "row.running",
+    "english": "Running",
+    "russian": "Выполняется",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "conversation",
+    "key": "terminal.running",
+    "english": "Running",
+    "russian": "Выполняется",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "cordis",
+    "key": "status.running",
+    "english": "Running",
+    "russian": "Выполняется",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "deepseek-model-label-1017",
+    "key": "badge.label",
+    "english": "1017",
+    "russian": "1017",
+    "reason": "Preserve model identifier"
+  },
+  {
+    "namespace": "deliverables",
+    "key": "presented.directoryOpened",
+    "english": "Requested opening containing folder",
+    "russian": "Отправлен запрос на открытие содержащей папки",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "deliverables",
+    "key": "presented.revealed",
+    "english": "Requested display in file manager",
+    "russian": "Отправлен запрос на показ в файловом менеджере",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "deliverables",
+    "key": "presented.opened",
+    "english": "Open requested",
+    "russian": "Отправлен запрос на открытие",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "job",
+    "key": "section.live",
+    "english": "Running",
+    "russian": "Активные",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "plan",
+    "key": "preview.historyUnavailable",
+    "english": "Session history is unavailable",
+    "russian": "История сеанса недоступна",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "pluginManager",
+    "key": "previewAlt",
+    "english": "{name} feature preview",
+    "russian": "Предварительный просмотр возможностей {name}",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "pluginManager",
+    "key": "previewUnavailable",
+    "english": "Could not display feature preview",
+    "russian": "Не удалось показать предварительный просмотр возможностей",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "pluginManager",
+    "key": "rowPhaseActive",
+    "english": "Running",
+    "russian": "Работает",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "pluginManager",
+    "key": "terminalRunning",
+    "english": "Running",
+    "russian": "Выполняется",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "settings.models",
+    "key": "fetchTitle",
+    "english": "Choose models to add",
+    "russian": "Выберите модели для добавления",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "settings.models",
+    "key": "fetchDescription",
+    "english": "These are the models this provider has available. Choose the ones to add.",
+    "russian": "Это модели, доступные у этого поставщика. Выберите те, которые нужно добавить.",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "settings.models",
+    "key": "fetchAdopt",
+    "english": "Add selected",
+    "russian": "Добавить выбранные",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "settings.pluginInventory",
+    "key": "active",
+    "english": "Running",
+    "russian": "Работает",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "settings.shell",
+    "key": "title",
+    "english": "Shell",
+    "russian": "Командная оболочка",
+    "reason": "Correct literal mistranslation of shell as seashell in upstream Russian"
+  },
+  {
+    "namespace": "sidebarTerminal",
+    "key": "shellEmpty",
+    "english": "No shells available",
+    "russian": "Нет доступных командных оболочек",
+    "reason": "Correct literal mistranslation of shell as seashell in upstream Russian"
+  },
+  {
+    "namespace": "question",
+    "key": "reply.label",
+    "english": "Reply to earlier pending questions",
+    "russian": "Ответить на предыдущие вопросы, ожидающие ответа",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "question",
+    "key": "reply.open",
+    "english": "Open question details",
+    "russian": "Открыть сведения о вопросе",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "question",
+    "key": "reply.close",
+    "english": "Close question details",
+    "russian": "Закрыть сведения о вопросе",
+    "reason": "Compatibility adaptation for 0.2.1-rc.5"
+  },
+  {
+    "namespace": "workflowRun",
+    "key": "status.running",
+    "english": "Running",
+    "russian": "Выполняется",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "workspace",
+    "key": "status.running",
+    "english": "Running",
+    "russian": "Выполняется",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  },
+  {
+    "namespace": "agent-team",
+    "key": "memberStatus.running",
+    "english": "Running",
+    "russian": "Выполняется",
+    "reason": "Correct execution-state mistranslation in upstream Russian"
+  }
+]

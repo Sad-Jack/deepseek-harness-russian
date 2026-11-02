@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "俄语 · 官方翻译",
+    "description": "适用于 Harness 0.2.1-rc.5 的俄语界面，基于 DeepSeek 官方翻译。此语言包不修改 macOS 原生菜单。"
+  }
+}

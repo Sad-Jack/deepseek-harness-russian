@@ -1,0 +1,269 @@
+{
+  "repository": "https://github.com/deepseek-ai/deepseek-harness",
+  "upstreamTag": "dsh-v0.2.2-alpha.2",
+  "upstreamCommit": "f3803c96974ad4a94195fb97e5c637e9c2a3afe3",
+  "targetTag": "dsh-v0.2.1-rc.5",
+  "targetCommit": "b830ec950faba0a46dda564be3e2d854afed94f1",
+  "installedBuildCommit": "d4db512a969fccf0c5cc7ec8fe38e9c1d27af916",
+  "keyInventory": "English dictionaries extracted from the installed application, not inferred from its source tag",
+  "namespaces": 64,
+  "strings": 2909,
+  "adaptations": 31,
+  "sources": {
+    "common": {
+      "target": "packages/dsh-client-locale.ts",
+      "upstream": "packages/client/locale/src/client/index.ts"
+    },
+    "settings.locale": {
+      "target": "packages/dsh-client-locale.ts",
+      "upstream": "packages/client/locale/src/client/index.ts"
+    },
+    "settings.agentPreset": {
+      "target": "packages/dsh-client-ui-agent-preset.ts",
+      "upstream": "packages/client/ui-agent-preset/src/client/index.ts"
+    },
+    "approval": {
+      "target": "packages/dsh-client-ui-approval.ts",
+      "upstream": "packages/client/ui-approval/src/client/index.ts"
+    },
+    "chat": {
+      "target": "packages/dsh-client-ui-chat.ts",
+      "upstream": "packages/client/ui-chat/src/client/apply.ts"
+    },
+    "command": {
+      "target": "packages/dsh-client-ui-commands.ts",
+      "upstream": "packages/client/ui-commands/src/client/index.ts"
+    },
+    "conversation": {
+      "target": "packages/dsh-client-ui-conversation.ts",
+      "upstream": "packages/client/ui-conversation/src/client/apply.ts"
+    },
+    "cordis": {
+      "target": "packages/dsh-client-ui-cordis.ts",
+      "upstream": "packages/extensions/ui-cordis/src/client/index.ts"
+    },
+    "deepseek-model-label-1017": {
+      "target": "packages/dsh-client-ui-deepseek-model-label-1017.ts"
+    },
+    "deliverables": {
+      "target": "packages/dsh-client-ui-deliverables.ts",
+      "upstream": "packages/client/ui-deliverables/src/client/index.ts"
+    },
+    "directory-browser": {
+      "target": "packages/dsh-client-ui-directory-picker-browse.ts",
+      "upstream": "packages/client/ui-directory-picker-browse/src/client/index.ts"
+    },
+    "entryCustomization": {
+      "target": "packages/dsh-client-ui-entry-customization.ts",
+      "upstream": "packages/client/ui-entry-customization/src/client/index.ts"
+    },
+    "goal": {
+      "target": "packages/dsh-client-ui-goal.ts",
+      "upstream": "packages/client/ui-goal/src/client/index.ts"
+    },
+    "slash.menu": {
+      "target": "packages/dsh-client-ui-input-trigger.ts",
+      "upstream": "packages/client/ui-input-trigger/src/client/index.ts"
+    },
+    "job": {
+      "target": "packages/dsh-client-ui-jobs.ts",
+      "upstream": "packages/client/ui-jobs/src/client/index.ts"
+    },
+    "shortcuts.layout": {
+      "target": "packages/dsh-client-ui-layout.ts",
+      "upstream": "packages/client/ui-layout/src/client/index.ts"
+    },
+    "feedback": {
+      "target": "packages/dsh-client-ui-message-feedback.ts",
+      "upstream": "packages/client/ui-message-feedback/src/client/index.ts"
+    },
+    "model": {
+      "target": "packages/dsh-client-ui-model-selection.ts",
+      "upstream": "packages/client/ui-model-selection/src/client/index.ts"
+    },
+    "open-in-app": {
+      "target": "packages/dsh-client-ui-open-in-app.ts",
+      "upstream": "packages/client/ui-open-in-app/src/client/index.ts"
+    },
+    "permission.access": {
+      "target": "packages/dsh-client-ui-permission-presets.ts",
+      "upstream": "packages/client/ui-permission-presets/src/client/index.ts"
+    },
+    "settings.permission": {
+      "target": "packages/dsh-client-ui-permission-presets.ts",
+      "upstream": "packages/client/ui-permission-presets/src/client/index.ts"
+    },
+    "plan": {
+      "target": "packages/dsh-client-ui-plan.ts",
+      "upstream": "packages/client/ui-plan/src/client/index.ts"
+    },
+    "pluginManager": {
+      "target": "packages/dsh-client-ui-plugin-manager.ts",
+      "upstream": "packages/client/ui-plugin-manager/src/client/index.ts"
+    },
+    "pluginMarket": {
+      "target": "packages/dsh-client-ui-plugin-market.ts",
+      "upstream": "packages/client/ui-plugin-market/src/client/index.ts"
+    },
+    "reference": {
+      "target": "packages/dsh-client-ui-reference.ts",
+      "upstream": "packages/client/ui-reference/src/client/index.ts"
+    },
+    "schedule.catalog": {
+      "target": "packages/dsh-client-ui-schedule.ts",
+      "upstream": "packages/client/ui-schedule/src/client/index.ts"
+    },
+    "schedule.manager": {
+      "target": "packages/dsh-client-ui-schedule.ts",
+      "upstream": "packages/client/ui-schedule/src/client/index.ts"
+    },
+    "secretMask": {
+      "target": "packages/dsh-client-ui-secret-mask.ts",
+      "upstream": "packages/client/ui-secret-mask/src/client/index.ts"
+    },
+    "settings.account": {
+      "target": "packages/dsh-client-ui-settings-account.ts",
+      "upstream": "packages/client/ui-settings-account/src/client/index.ts"
+    },
+    "settings.agentLoop": {
+      "target": "packages/dsh-client-ui-settings-agent-loop.ts",
+      "upstream": "packages/client/ui-settings-agent-loop/src/client/index.ts"
+    },
+    "settings": {
+      "target": "packages/dsh-client-ui-settings-general.ts",
+      "upstream": "packages/client/ui-settings-general/src/client/index.ts"
+    },
+    "settings.models": {
+      "target": "packages/dsh-client-ui-settings-models.ts",
+      "upstream": "packages/client/ui-settings-models/src/client/index.ts"
+    },
+    "settings.pluginInventory": {
+      "target": "packages/dsh-client-ui-settings-plugin-inventory.ts",
+      "upstream": "packages/client/ui-settings-plugin-inventory/src/client/index.ts"
+    },
+    "settings.plugins": {
+      "target": "packages/dsh-client-ui-settings-plugins.ts",
+      "upstream": "packages/client/ui-settings-plugins/src/client/index.ts"
+    },
+    "settings.sessionLog": {
+      "target": "packages/dsh-client-ui-settings-session-log.ts",
+      "upstream": "packages/client/ui-settings-session-log/src/client/index.ts"
+    },
+    "settings.shell": {
+      "target": "packages/dsh-client-ui-settings-shell.ts",
+      "upstream": "packages/client/ui-settings-shell/src/client/index.ts"
+    },
+    "settings.subagent": {
+      "target": "packages/dsh-client-ui-settings-subagent.ts",
+      "upstream": "packages/client/ui-settings-subagent/src/client/index.ts"
+    },
+    "settings.webSearch": {
+      "target": "packages/dsh-client-ui-settings-web-search.ts",
+      "upstream": "packages/client/ui-settings-web-search/src/client/index.ts"
+    },
+    "shortcuts": {
+      "target": "packages/dsh-client-ui-shortcuts.ts",
+      "upstream": "packages/client/ui-shortcuts/src/client/index.ts"
+    },
+    "sidebarBrowser": {
+      "target": "packages/dsh-client-ui-sidebar-browser.ts",
+      "upstream": "packages/client/ui-sidebar-browser/src/client/index.ts"
+    },
+    "documentMarkdown": {
+      "target": "packages/dsh-client-ui-sidebar-documentpreview.ts",
+      "upstream": "packages/client/ui-sidebar-documentpreview/src/client/markdown/index.ts"
+    },
+    "documentHtml": {
+      "target": "packages/dsh-client-ui-sidebar-documentpreview.ts",
+      "upstream": "packages/client/ui-sidebar-documentpreview/src/client/html/index.ts"
+    },
+    "sidebarImage": {
+      "target": "packages/dsh-client-ui-sidebar-documentpreview.ts",
+      "upstream": "packages/client/ui-sidebar-documentpreview/src/client/image/index.ts"
+    },
+    "sidebarPdf": {
+      "target": "packages/dsh-client-ui-sidebar-documentpreview.ts",
+      "upstream": "packages/client/ui-sidebar-documentpreview/src/client/pdf/index.ts"
+    },
+    "sidebarCodePreview": {
+      "target": "packages/dsh-client-ui-sidebar-documentpreview.ts",
+      "upstream": "packages/client/ui-sidebar-documentpreview/src/client/code/index.ts"
+    },
+    "sidebarOffice": {
+      "target": "packages/dsh-client-ui-sidebar-documentpreview.ts",
+      "upstream": "packages/client/ui-sidebar-documentpreview/src/client/office/index.ts"
+    },
+    "sidebarExcel": {
+      "target": "packages/dsh-client-ui-sidebar-documentpreview.ts",
+      "upstream": "packages/client/ui-sidebar-documentpreview/src/client/excel/index.ts"
+    },
+    "sidebarDocumentPreview": {
+      "target": "packages/dsh-client-ui-sidebar-documentpreview.ts",
+      "upstream": "packages/client/ui-sidebar-documentpreview/src/client/index.ts"
+    },
+    "sidebarFiles": {
+      "target": "packages/dsh-client-ui-sidebar-files.ts",
+      "upstream": "packages/client/ui-sidebar-files/src/client/index.ts"
+    },
+    "sidebarRight": {
+      "target": "packages/dsh-client-ui-sidebar-right.ts",
+      "upstream": "packages/client/ui-sidebar-right/src/client/index.ts"
+    },
+    "sidebarTerminal": {
+      "target": "packages/dsh-client-ui-sidebar-terminal.ts",
+      "upstream": "packages/client/ui-sidebar-terminal/src/client/index.ts"
+    },
+    "sidebar": {
+      "target": "packages/dsh-client-ui-sidebar.ts",
+      "upstream": "packages/client/ui-sidebar/src/client/index.ts"
+    },
+    "skill": {
+      "target": "packages/dsh-client-ui-skill.ts",
+      "upstream": "packages/client/ui-skill/src/client/index.ts"
+    },
+    "subagent": {
+      "target": "packages/dsh-client-ui-subagent.ts",
+      "upstream": "packages/client/ui-subagent/src/client/index.ts"
+    },
+    "settings.theme": {
+      "target": "packages/dsh-client-ui-theme.ts",
+      "upstream": "packages/client/ui-theme/src/client/index.ts"
+    },
+    "trajectory": {
+      "target": "packages/dsh-client-ui-trajectory.ts",
+      "upstream": "packages/client/ui-trajectory/src/client/index.ts"
+    },
+    "question": {
+      "target": "packages/dsh-client-ui-user-questions.ts",
+      "upstream": "packages/client/ui-user-questions/src/client/index.ts"
+    },
+    "workflowRun": {
+      "target": "packages/dsh-client-ui-workflow-run.ts",
+      "upstream": "packages/client/ui-workflow-run/src/client/index.ts"
+    },
+    "workspace": {
+      "target": "packages/dsh-client-ui-workspace.ts",
+      "upstream": "packages/client/ui-workspace/src/client/index.ts"
+    },
+    "agent-team": {
+      "target": "packages/dsh-experimental-client-ui-agent-team.ts",
+      "upstream": "packages/experimental/client-ui-agent-team/src/client/mount.ts"
+    },
+    "cotTranslation": {
+      "target": "packages/dsh-experimental-client-ui-cot-translation.ts",
+      "upstream": "packages/experimental/client-ui-cot-translation/src/client/mount.ts"
+    },
+    "voice-input": {
+      "target": "packages/dsh-experimental-client-ui-voice-input.ts",
+      "upstream": "packages/experimental/client-ui-voice-input/src/client/mount.ts"
+    },
+    "session-inspector": {
+      "target": "packages/dsh-experimental-session-inspector.ts",
+      "upstream": "packages/experimental/session-inspector/src/client/index.ts"
+    },
+    "session-log-download": {
+      "target": "packages/dsh-session-log-export.ts",
+      "upstream": "packages/session-query/session-log-export/src/client/index.ts"
+    }
+  }
+}

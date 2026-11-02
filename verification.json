@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "targetRuntime": "Installed DeepSeek Harness 0.2.1-rc.5",
+  "namespaces": 64,
+  "strings": 2909,
+  "checks": [
+    "Complete target dictionary keys",
+    "All named placeholders preserved and interpolated",
+    "Real installed LocaleRuntime lookup",
+    "Language preference persistence",
+    "English fallback",
+    "Cleanup, disable and re-enable",
+    "Atomic rollback on registration failure",
+    "Existing Russian language preserved",
+    "No runtime dependencies or install scripts"
+  ]
+}
