@@ -50,7 +50,7 @@ dsh plugin --profile desktop add github:Sad-Jack/deepseek-harness-russian
 
 ### Через встроенную вкладку Discover
 
-В репозитории опубликован [индекс формата Harness](plugin-index.json). Он позволяет открыть карточку плагина во встроенном каталоге, выбрав совместимую версию:
+В репозитории опубликован [индекс формата Harness](https://raw.githubusercontent.com/Sad-Jack/deepseek-harness-russian/main/plugin-index.json). Он позволяет открыть карточку плагина во встроенном каталоге, выбрав совместимую версию:
 
 1. В **Plugins → Experimental plugins → More** включи **Custom plugin markets**. В более новых версиях этот компонент называется **Custom plugin indexes**.
 2. Открой появившуюся вкладку **Discover** и добавь источник индекса:
