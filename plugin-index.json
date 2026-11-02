@@ -1,0 +1,47 @@
+{
+  "format": 1,
+  "title": {
+    "en": "DeepSeek Harness Russian",
+    "ru": "Русский язык для DeepSeek Harness",
+    "zh": "DeepSeek Harness 俄语语言包"
+  },
+  "description": {
+    "en": "Independent Russian language pack for DeepSeek Harness 0.2.1-rc.5, based on official translations.",
+    "ru": "Независимый языковой пакет для DeepSeek Harness 0.2.1-rc.5 на основе официальных переводов."
+  },
+  "plugins": [
+    {
+      "name": "@local/dsh-locale-ru-021",
+      "title": {
+        "en": "Russian · official translations",
+        "ru": "Русский · официальные переводы",
+        "zh": "俄语 · 官方翻译"
+      },
+      "description": {
+        "en": "Russian interface for Harness 0.2.1-rc.5. Uses official DeepSeek translations; macOS application menus are outside this language pack.",
+        "ru": "Русский интерфейс Harness 0.2.1-rc.5 на основе переводов DeepSeek. Системное меню macOS переводится отдельно от языковых плагинов.",
+        "zh": "适用于 Harness 0.2.1-rc.5 的俄语界面，基于 DeepSeek 官方翻译。此语言包不修改 macOS 原生菜单。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiM0MDU4ZDkiLz48cGF0aCBkPSJNMTcgMTloMTh2NkgyM3YyMGgtNnptMTIgMTFoOHY2aC04eiIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJtMzggMTkgMTAgMjZoLTdsLTItNmgtOWwtMiA2aC03bDEwLTI2em0tMyA5LTMgNmg1eiIgZmlsbD0id2hpdGUiLz48L3N2Zz4K",
+      "author": "Sad-Jack",
+      "homepage": "https://github.com/Sad-Jack/deepseek-harness-russian#readme",
+      "repository": {
+        "url": "https://github.com/Sad-Jack/deepseek-harness-russian"
+      },
+      "versions": [
+        {
+          "version": "1.0.1",
+          "publishTimestamp": 1793656290,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Sad-Jack/deepseek-harness-russian",
+            "commit": "dc022b2db99f98f081aac9d16d28fef4ff14734a"
+          },
+          "engines": {
+            "dsh": "0.2.1-rc.5"
+          }
+        }
+      ]
+    }
+  ]
+}
