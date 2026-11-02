@@ -1,7 +1,6 @@
 {
   "name": "@local/dsh-locale-ru-021",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.1",
   "type": "module",
   "license": "MIT",
   "description": "Russian language pack for DeepSeek Harness 0.2.1-rc.5, based on official DeepSeek translations.",
@@ -22,7 +21,8 @@
     "verification.json",
     "UI-VERIFICATION.md",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "dsh": {
     "bundle": {
@@ -35,5 +35,29 @@
         "@deepseek-ai/dsh-client-locale"
       ]
     }
+  },
+  "homepage": "https://github.com/Sad-Jack/deepseek-harness-russian#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sad-Jack/deepseek-harness-russian.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sad-Jack/deepseek-harness-russian/issues"
+  },
+  "author": {
+    "name": "Sad-Jack",
+    "url": "https://github.com/Sad-Jack"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "russian",
+    "ru",
+    "localization",
+    "i18n",
+    "language-pack"
+  ],
+  "engines": {
+    "dsh": "0.2.1-rc.5"
   }
 }
