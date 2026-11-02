@@ -1,163 +1,154 @@
 # DeepSeek Harness Russian
 
-**Русский язык для DeepSeek Harness.** Поддерживаемая версия приложения: **0.2.1-rc.5**.
+**English** · [简体中文](README.zh.md) · [Русский](README.ru.md)
 
-Локальный языковой плагин на основе официальных переводов DeepSeek. Это самостоятельная упаковка переводов для старой версии, а не официальный релиз плагина от DeepSeek.
+Russian interface language pack for **DeepSeek Harness 0.2.1-rc.5**, based on official DeepSeek translations.
 
-**2 909 строк · 64 словаря · без зависимостей · без изменения приложения.**
+**2,909 strings · 64 namespaces · no runtime dependencies · no application archive patching.**
 
-## Почему мы его создали
+This is an independent backport of official translations, **not an official DeepSeek plugin**. If your Harness version already includes Russian, you do not need this package.
 
-В установленной настольной версии **0.2.1-rc.5** были доступны только английский и китайский языки. При этом в официальных исходниках и описании релиза **0.2.2-alpha.2** русский язык уже присутствовал.
+## Why we created it
 
-На момент проверки **3 ноября 2026 года** встроенное обновление и установщик с сайта DeepSeek предлагали для Mac ту же **0.2.1-rc.5**, а готового Mac-установщика для **0.2.2-alpha.2** в проверенном официальном релизе не было. Поэтому включить русский обычным обновлением не получилось.
+The installed desktop build **0.2.1-rc.5** offered English and Chinese only, while Russian translations were already available in the official **0.2.2-alpha.2** source release.
 
-Мы создали этот пакет, чтобы перенести готовые официальные переводы в установленную версию через штатный механизм языковых плагинов — без самостоятельной сборки Harness и без изменения его `app.asar`.
+When checked on **November 3, 2026**, both the built-in updater and the official Mac download still provided **0.2.1-rc.5**. The checked **0.2.2-alpha.2** GitHub release did not include a ready-made Mac installer, so updating the desktop application did not provide Russian.
 
-- [Официальный репозиторий DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness).
-- [Релиз 0.2.2-alpha.2 с добавлением русского языка](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-alpha.2).
-- [Документация языковых пакетов](https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.2-alpha.2/packages/client/locale/README.md).
+This package brings those translations to the installed version through the supported language-pack API, without building Harness or modifying `app.asar`. Newer desktop releases may change the need for this backport.
 
-Доступность новых настольных сборок со временем может измениться. Если в твоей версии уже есть встроенный русский язык, этот пакет не нужен.
+Sources: [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness), [0.2.2-alpha.2 release](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-alpha.2), and [language-pack API](https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.2-alpha.2/packages/client/locale/README.md).
 
-## Установка
+## Compatibility
 
-### Быстрый способ: по ссылке на GitHub
+| Item | Supported or verified scope |
+| --- | --- |
+| Harness version | **0.2.1-rc.5**, declared explicitly in `engines.dsh` |
+| Manually verified platform | **macOS, Apple silicon** |
+| Other platforms and versions | Not manually verified; no broader compatibility is claimed |
+| Existing Russian locale | Registration is skipped when `ru` already exists |
 
-1. В Harness открой **Plugins → Add plugin**.
-2. Вставь ссылку на этот репозиторий:
+Disable this package before installing another Russian language pack. It does not override an existing locale or attempt to translate newer, unverified versions.
+
+## Installation
+
+### From GitHub in the application
+
+1. Open **Plugins → Add plugin**.
+2. Enter:
 
    ```text
    https://github.com/Sad-Jack/deepseek-harness-russian
    ```
 
-3. Нажми **Install**, дождись завершения и нажми **Enable now**.
-4. Открой **Account menu → Settings → General → Language → Русский** и явно выбери русский язык.
+3. Select **Install**, wait for completion, then select **Enable now**.
+4. Open **Account menu → Settings → General → Language → Русский** and explicitly select Russian.
 
-Репозиторий публичный: для скачивания не требуется доступ к аккаунту автора. Сборка пакета и установка зависимостей вручную не нужны. Если установка из GitHub не проходит, используй проверенный способ с локальной папкой ниже.
+With Russian system preferences, the interface may switch as soon as the plugin is enabled. Explicitly selecting the language saves your preference. Restart Harness if it asks you to.
 
-### Установка из терминала
+The repository is public. No access to the author's account, manual dependency installation, or local build is required. If GitHub installation fails, use the local-folder method below.
 
-Если CLI `dsh` уже установлен, можно подключить пакет в нужный профиль:
+### From the command line
+
+With the `dsh` CLI already installed:
 
 ```sh
 dsh plugin --profile desktop add github:Sad-Jack/deepseek-harness-russian
 ```
 
-Для веб-интерфейса используй `--profile web` вместо `--profile desktop`. После установки включи плагин в разделе **Plugins** и выбери **Русский** в настройках языка.
+Use `--profile web` for the Web profile. Enable the package in **Plugins** if needed, then select **Русский** in the language settings. Prebuilt archives are also available in [Releases](https://github.com/Sad-Jack/deepseek-harness-russian/releases). Publishing to npm is not required for installation from GitHub.
 
-Готовые архивы доступны в [Releases](https://github.com/Sad-Jack/deepseek-harness-russian/releases). Публикация в npm для установки из GitHub не требуется.
+### Through the built-in Discover tab
 
-### Через встроенную вкладку Discover
-
-В репозитории опубликован [индекс формата Harness](https://raw.githubusercontent.com/Sad-Jack/deepseek-harness-russian/main/plugin-index.json). Он позволяет открыть карточку плагина во встроенном каталоге, выбрав совместимую версию:
-
-1. В **Plugins → Experimental plugins → More** включи **Custom plugin markets**. В более новых версиях этот компонент называется **Custom plugin indexes**.
-2. Открой появившуюся вкладку **Discover** и добавь источник индекса:
+1. In **Plugins → Experimental plugins → More**, enable **Custom plugin markets**. Newer Harness versions call this component **Custom plugin indexes**.
+2. Open **Discover** and add this index source:
 
    ```text
    https://raw.githubusercontent.com/Sad-Jack/deepseek-harness-russian/main/plugin-index.json
    ```
 
-3. Открой карточку русского языкового пакета, проверь источник установки и нажми **Install**.
-4. Включи плагин и выбери **Русский** в общих настройках.
+3. Open the language-pack card, check its installation source, and select **Install**.
+4. Enable the package and select **Русский** in General settings.
 
-Этот небольшой индекс поддерживается автором пакета и не является официальным каталогом DeepSeek. Версия в нём привязана к конкретному коммиту; индекс не обещает совместимость с непроверенными версиями Harness. Публикация в каталогах сообщества проходит отдельно по их правилам.
+This is an author-maintained index, not an official DeepSeek catalog. It pins an immutable Git commit and declares only the verified Harness version. Community-catalog acceptance is separate: [submission #11494](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/11494).
 
-### Альтернатива: скачать и подключить локальную папку
+### From a local folder
 
-#### 1. Скачай репозиторий
-
-Скачай [ZIP с исходниками](https://github.com/Sad-Jack/deepseek-harness-russian/archive/refs/heads/main.zip) и распакуй архив. Либо склонируй репозиторий:
+Download and extract the [repository ZIP](https://github.com/Sad-Jack/deepseek-harness-russian/archive/refs/heads/main.zip), or clone it:
 
 ```sh
 git clone https://github.com/Sad-Jack/deepseek-harness-russian.git
 ```
 
-Выбери постоянную папку: при локальной установке Harness подключает пакет напрямую из неё.
+Choose a permanent directory containing `package.json`, `client.js`, and `cordis.patch.yml` at its root. Node.js, `npm install`, and a build step are not needed.
 
-Нужна папка, в корне которой находятся `package.json`, `client.js` и `cordis.patch.yml`. Устанавливать Node.js, запускать `npm install` или собирать пакет не требуется.
-
-#### 2. Подключи плагин в Harness
-
-1. Открой **Plugins → Add plugin**.
-2. В поле **Package name or address** вставь **полный путь к папке плагина**.
-3. Нажми **Install** и дождись статуса **Installed**.
-4. Нажми **Enable now**. Если окно уже закрыто, включи пакет **Russian · official translations** в списке установленных плагинов.
-
-Пример пути — замени его на реальный путь на своём компьютере:
+In **Plugins → Add plugin → Package name or address**, enter the folder's absolute path, for example:
 
 ```text
 /Users/your-name/Projects/deepseek-harness-russian
 ```
 
-#### 3. Выбери русский язык
+Replace that example with your actual path. Install and enable **Russian · official translations**, then select **Русский** in **Settings → General → Language**. In Russian, the same route is **Меню аккаунта → Настройки → Общие → Язык → Русский**.
 
-Открой **Account menu → Settings → General → Language → Русский**. После переключения этот путь выглядит так: **Меню аккаунта → Настройки → Общие → Язык → Русский**.
+**Keep a locally installed folder in place.** Harness links to it directly. To move it, remove the package through Harness, move the folder, and install it again.
 
-При русской системной локали интерфейс может переключиться сразу после включения плагина. Всё равно выбери **Русский** в настройках, чтобы явно сохранить предпочтение. При запросе приложения перезапусти его.
+### If installation stays on Checking…
 
-**Не перемещай и не удаляй папку**, пока пакет установлен локально. Для переноса сначала удали пакет через Harness, перенеси папку и подключи её заново.
+On the verified Mac, the first local-folder inspection stalled. Closing the install dialog, restarting Harness normally, and retrying resolved it. A stalled dialog does not prove installation: check the installed-package list and its enabled switch.
 
-### Если установка зависла на Checking…
+## Translation coverage and adaptations
 
-При первой установке на проверенном Mac менеджер плагинов завис на предварительной проверке папки. Закрытие окна установки, обычный перезапуск Harness и повторная установка решили проблему. Само зависание не подтверждает установку: проверь наличие пакета в списке и включённый переключатель.
+The 64 dictionaries cover all **2,909 English keys extracted from the installed build**, rather than assuming its public source tag has an identical inventory. They cover client sections such as chat, settings, sidebars, models, permissions, plans, automation, tools, subagents, and plugin management.
 
-Пакет не содержит зависимостей, установочных скриптов, сетевых запросов или инструментов агента. Он регистрирует русский язык и словари через штатный API `ctx.locale`. Установка сама не меняет явную настройку языка.
+Most text comes directly from the official `dsh-v0.2.2-alpha.2` translations. The documented delta contains:
 
-## Переводы и совместимость
+- **16 compatibility adaptations:** preserving the `1017` model identifier, supplying older keys absent from the newer release, and matching feature descriptions to 0.2.1-rc.5 behavior.
+- **15 terminology corrections:** two literal translations of Shell as “seashell,” and 13 execution-state labels translated as the noun “running/race.” Appropriate Russian command-shell and execution-state terms are used instead.
 
-- Целевая версия: **0.2.1-rc.5**.
-- Проверенная платформа: **macOS, Apple silicon**. На других версиях и платформах установка вручную не проверялась.
-- Источник: официальный репозиторий [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness), тег [dsh-v0.2.2-alpha.2](https://github.com/deepseek-ai/deepseek-harness/tree/dsh-v0.2.2-alpha.2).
-- **2 909 строк, 64 пространства имён**. Покрыты все ключи 64 клиентских словарей, извлечённых непосредственно из установленной сборки. Дополнительно сверены исходники целевого тега; инвентаризация установленной сборки имеет приоритет.
-- **16 адаптаций совместимости и 15 исправлений терминологии**: сохранён идентификатор модели `1017`, переведены отсутствующие в новом теге старые ключи, согласованы описания выбора моделей, ответов и доступности инструментов с поведением старой версии. Исправлены два буквальных перевода Shell как «ракушка»: используется «командная оболочка». В 13 статусах исправлён буквальный перевод Running как «Бег»: используются «Выполняется», «Работает» или «Активные» по контексту.
-- Точные коммиты и пути файлов: `provenance.json`. Изменённые строки: `translations/compatibility.json`. Готовые словари: `translations/ru.json`.
-- Именованные подстановки сохранены. Для отсутствующих ключей работает штатный английский резервный перевод.
-- Если русский язык уже зарегистрирован приложением или другим пакетом, плагин ничего не меняет. Перед установкой другого русского языкового пакета отключите этот.
+Named placeholders such as `{count}` and `{path}` are preserved. Missing keys use Harness's normal English fallback. Exact source commits are recorded in [provenance.json](provenance.json); every changed entry is listed in [translations/compatibility.json](translations/compatibility.json).
 
-Начиная с версии пакета **1.0.1**, совместимость явно ограничена `engines.dsh: 0.2.1-rc.5`, а манифест открыт для публичной индексации. Это позволяет каталогам показывать пакет подходящей версии Harness. Запись в каталоге сообщества появляется после рассмотрения заявки его сопровождающими; публичный репозиторий сам по себе не означает принятия в каталог.
+## What remains untranslated
 
-Заявка в каталог **awesome-dsh-plugin**, который использует dsh-market: [pull request #11494](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/11494). Текущий статус рассмотрения указан на странице заявки. Независимый индекс для встроенного Discover доступен по инструкции выше.
+- **Native macOS menus** and separate sign-in/update windows: this release's desktop shell owns their dictionaries.
+- Some experimental-plugin names and descriptions loaded from the application's own metadata.
+- Model responses, terminal output, code, filenames, and user-authored content.
 
-## Границы перевода
+The plugin does not change the application layout. Long Russian labels may be shortened by narrow controls. The package adds no agent tools, install scripts, runtime dependencies, or translation-service requests; it registers dictionaries through `ctx.locale`.
 
-Плагин переводит основной клиентский интерфейс. Он **не изменяет `app.asar`**, системные меню macOS, отдельные окна входа и обновления, а также названия и описания чужих плагинов, которые старое приложение загружает из собственных метаданных. Ответы модели, терминальный вывод, код, имена файлов и пользовательский текст остаются исходными.
+## Verification and requirements
 
-Полнота ключей не означает, что все экраны и все ошибки были вручную воспроизведены. Проверки словарей и механизма регистрации описаны в `verification.json`; результаты проверки интерфейса — в `UI-VERIFICATION.md`.
+All 2,909 keys were checked using the installed 0.2.1-rc.5 locale runtime: key coverage, placeholders and interpolation, English fallback, preference persistence, cleanup, re-enabling, rollback after registration failure, and preservation of an existing Russian locale.
 
-## Проверка и устройство пакета
+The main screen, sidebar, General settings, automation page, plugin list, and package details were inspected in the application. Russian remained selected after a full restart. This does not mean every possible screen or error was manually exercised.
 
-Все 2 909 ключей проверены на механизме локализации установленной **0.2.1-rc.5**: совпадение ключей, сохранность подстановок, получение переводов, английский резервный перевод, сохранение предпочтения языка, отключение, повторное включение и откат незавершённой регистрации.
+See [verification.json](verification.json), [UI-VERIFICATION.md](UI-VERIFICATION.md), and the dated [requirements review](REQUIREMENTS.md). Technical eligibility and a passing check do not guarantee a community-catalog review or merge.
 
-В приложении проверены основной экран, боковая панель, общие настройки, раздел автоматизации, список плагинов и карточка пакета. Русский сохранился после полного закрытия и повторного запуска Harness.
+## Package contents
 
-| Файл | Назначение |
+| File | Purpose |
 | --- | --- |
-| `client.js` | Готовый клиентский модуль с переводами и регистрацией языка |
-| `index.js` | Минимальная серверная часть без инструментов и сервисов |
-| `cordis.patch.yml` | Подключение плагина к композиции Harness |
-| `package.json` | Манифест устанавливаемого пакета |
-| [translations/ru.json](translations/ru.json) | Полный русский словарь |
-| [translations/target-en.json](translations/target-en.json) | Английские ключи проверенной установленной сборки |
-| [translations/compatibility.json](translations/compatibility.json) | Отличия от официальных переводов |
-| `locale/*.json` | Название и описание самого плагина |
-| [provenance.json](provenance.json) | Источники переводов и точные коммиты |
-| [verification.json](verification.json) | Результаты программных проверок |
-| [UI-VERIFICATION.md](UI-VERIFICATION.md) | Результаты проверки интерфейса и её ограничения |
+| `client.js` | Ready-to-install client module with the embedded dictionaries |
+| `index.js` | Minimal host module; adds no tools or services |
+| `cordis.patch.yml` | Registers the bundle in the Harness composition |
+| `package.json` | Package manifest, exports, files and compatibility |
+| [translations/ru.json](translations/ru.json) | Complete Russian dictionaries |
+| [translations/target-en.json](translations/target-en.json) | English key inventory from the verified installed build |
+| [translations/compatibility.json](translations/compatibility.json) | Documented changes from upstream translations |
+| `locale/*.json`, `icon.svg` | The package's own localized metadata and original icon |
+| [provenance.json](provenance.json) | Source versions, commits, and file paths |
+| [CHANGELOG.md](CHANGELOG.md) | Package release history |
 
-`client.js` уже готов к установке. JSON-файлы сохранены для проверки и сопровождения; изменение только `translations/ru.json` не обновляет встроенный в `client.js` словарь автоматически.
+`client.js` is already built. Editing only `translations/ru.json` does **not** automatically update the dictionaries embedded in `client.js`.
 
-## Обратная связь
+## Feedback
 
-Если заметил пропущенную надпись или ошибку перевода, [создай issue](https://github.com/Sad-Jack/deepseek-harness-russian/issues). Укажи версию Harness, операционную систему, раздел интерфейса и ожидаемый перевод. Перед добавлением скриншота скрой личные данные.
+[Open an issue](https://github.com/Sad-Jack/deepseek-harness-russian/issues) with your Harness version, operating system, affected screen, and expected translation. Remove personal information from screenshots before posting them.
 
-## Отключение и удаление
+## Disable or uninstall
 
-Выберите другой язык в **Настройки → Общие → Язык**, затем отключите или удалите пакет в разделе **Плагины**. При отключении плагин освобождает собственные словари и определение языка. Папку с установленным локальным пакетом сохраняйте до его удаления через интерфейс.
+Select a different language in **Settings → General → Language**, then disable or remove the package under **Plugins**. Disabling releases its dictionaries and language definition. Keep the local folder until the package is removed through the application.
 
-При переходе на версию Harness со встроенным русским отключи этот пакет и используй штатный перевод.
+When upgrading to a Harness version with built-in Russian, disable this package and use the built-in locale.
 
-## Лицензия
+## License
 
-Официальные переводы распространяются по MIT, Copyright (c) 2026 DeepSeek. Текст лицензии сохранён в `LICENSE`. Локальная упаковка и оригинальный значок также предоставляются по MIT. Терминология официальных переводов сохранена, кроме документированных адаптаций совместимости.
+Official translations: **MIT**, Copyright (c) 2026 DeepSeek. The original notice is retained in [LICENSE](LICENSE). The local packaging and original icon are also provided under MIT. This repository is not an official DeepSeek project.

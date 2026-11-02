@@ -1,6 +1,6 @@
 {
   "name": "@local/dsh-locale-ru-021",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "license": "MIT",
   "description": "Russian language pack for DeepSeek Harness 0.2.1-rc.5, based on official DeepSeek translations.",
@@ -21,8 +21,9 @@
     "verification.json",
     "UI-VERIFICATION.md",
     "LICENSE",
-    "README.md",
-    "CHANGELOG.md"
+    "README*.md",
+    "CHANGELOG.md",
+    "REQUIREMENTS.md"
   ],
   "dsh": {
     "bundle": {
